@@ -3,32 +3,14 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
-import './pages/homepage/homepage.styles.scss';
-
-const HatsPage = (props) => {
-  console.log(props)
-  return(
-    <div>
-      <h1>HATS PAGE</h1>
-    </div>
-  )
-}
-
-const HatsDetail = (props) => {
-  console.log(props.match.params.hatid);
-  return(
-    <div>
-      <h1>HAT DETAIL {props.match.params.hatid} </h1>
-    </div>
-  )
-}
+import ShopPage from './pages/shop/shop.component';
 
 function App() {
   return (
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/hats" component={HatsPage} />
+        <Route path="/shop" component={ShopPage} />
       </Switch>
     </div>
   );
